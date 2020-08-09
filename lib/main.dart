@@ -24,14 +24,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: title,
       home: Scaffold(
+        backgroundColor: Colors.white12,
         appBar: AppBar(
+          backgroundColor: Colors.black,
           title: Text(title),
         ),
         body: ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text('${items[index].Name}'),
+              title: Text(
+                  '${items[index].Name}'.toUpperCase(),
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w400,
+                fontSize: 25,
+              ),
+              ),
             );
           },
         ),
