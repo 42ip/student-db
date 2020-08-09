@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white12,
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Colors.black,
           title: Text(title),
         ),
