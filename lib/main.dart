@@ -34,13 +34,33 @@ class MyApp extends StatelessWidget {
           itemCount: items.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(
-                  '${items[index].Name}'.toUpperCase(),
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w400,
-                fontSize: 18,
+              leading: Icon(
+                Icons.broken_image,
+                color: Colors.grey[400],
               ),
+//              title: Text('${items[index].Name}'),
+              subtitle: Text('${items[index].Roll_no}',
+                style: TextStyle(
+                    color: Colors.grey[500]
+                ),
+              ),
+              trailing: FlatButton(
+                  onPressed:() {
+                    print('${items[index].Section}' );
+                  },
+                  child:
+                  Icon(
+                    Icons.arrow_right,
+                    color: Colors.grey[400],
+                  )
+              ),
+              title: Text(
+                '${items[index].Name}'.toUpperCase(),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 18,
+                ),
               ),
             );
           },
