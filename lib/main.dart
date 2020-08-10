@@ -1,4 +1,7 @@
 import 'dart:convert';
+import 'dart:ffi';
+import 'package:flutter/rendering.dart';
+
 import 'Student.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -34,8 +37,9 @@ class MyApp extends StatelessWidget {
           itemCount: items.length,
           itemBuilder: (context, index) {
             return Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 3.0),
               child: ListTile(
+                tileColor: Colors.grey[900],
                 leading: Icon(
                   Icons.broken_image,
                   color: Colors.grey[400],
