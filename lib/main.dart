@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
               ),
               trailing: FlatButton(
                   onPressed: () {
-                    print('${items[index].Section}');
+                    print('${items[index].Section}'.toUpperCase());
                   },
                   child: Icon(
                     Icons.arrow_right,
