@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: title,
       home: Scaffold(
-        backgroundColor: Colors.white12,
+        backgroundColor: Colors.white24,
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: Colors.black,
@@ -33,30 +33,34 @@ class MyApp extends StatelessWidget {
         body: ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
-            return ListTile(
-              leading: Icon(
-                Icons.broken_image,
-                color: Colors.grey[400],
-              ),
+            return Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.broken_image,
+                  color: Colors.grey[400],
+                ),
 //              title: Text('${items[index].Name}'),
-              subtitle: Text(
-                '${items[index].Roll_no}',
-                style: TextStyle(color: Colors.grey[500]),
-              ),
-              trailing: FlatButton(
-                  onPressed: () {
-                    print('${items[index].Section}'.toUpperCase());
-                  },
-                  child: Icon(
-                    Icons.arrow_right,
-                    color: Colors.grey[400],
-                  )),
-              title: Text(
-                '${items[index].Name}'.toUpperCase(),
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 18,
+                subtitle: Text(
+                  '${items[index].Roll_no}',
+                  style: TextStyle(color: Colors.grey[400]),
+                ),
+                trailing: FlatButton(
+                    onPressed: () {
+                      print('${items[index].Section}'.toUpperCase());
+                    },
+                    child: Icon(
+                      Icons.arrow_right,
+                      color: Colors.grey[400],
+                      size: 30,
+                    )),
+                title: Text(
+                  '${items[index].Name}'.toUpperCase(),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 18,
+                  ),
                 ),
               ),
             );
