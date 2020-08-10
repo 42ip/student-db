@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 void main() async {
   var client = new http.Client();
-  final res = await client.get('http://3.85.78.70:8080/getAllStudents');
+  final res = await client.get('http://34.224.4.55:8080/getAllStudents');
   final parsed = json.decode(res.body).cast<Map<String, dynamic>>();
   var temp = parsed.map<Student>((json) => Student.fromJson(json)).toList();
   runApp(MyApp(items: temp));
@@ -39,21 +39,18 @@ class MyApp extends StatelessWidget {
                 color: Colors.grey[400],
               ),
 //              title: Text('${items[index].Name}'),
-              subtitle: Text('${items[index].Roll_no}',
-                style: TextStyle(
-                    color: Colors.grey[500]
-                ),
+              subtitle: Text(
+                '${items[index].Roll_no}',
+                style: TextStyle(color: Colors.grey[500]),
               ),
               trailing: FlatButton(
-                  onPressed:() {
-                    print('${items[index].Section}' );
+                  onPressed: () {
+                    print('${items[index].Section}');
                   },
-                  child:
-                  Icon(
+                  child: Icon(
                     Icons.arrow_right,
                     color: Colors.grey[400],
-                  )
-              ),
+                  )),
               title: Text(
                 '${items[index].Name}'.toUpperCase(),
                 style: TextStyle(
