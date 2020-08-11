@@ -23,21 +23,36 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/branchHome',
+                    );
+                  },
                   child: Text('branches', style: TextStyle(fontSize: 20)),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/collegeInfoHome',
+                    );
+                  },
                   child: Text('college info', style: TextStyle(fontSize: 20)),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/examHome',
+                    );
+                  },
                   child: Text('Exams', style: TextStyle(fontSize: 20)),
                 ),
               ),
@@ -56,15 +71,13 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/subjectHome',
+                    );
+                  },
                   child: Text('Subjects', style: TextStyle(fontSize: 20)),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: RaisedButton(
-                  onPressed: () {},
-                  child: Text('Disabled Button', style: TextStyle(fontSize: 20)),
                 ),
               ),
             ],

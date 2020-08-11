@@ -1,15 +1,14 @@
-import 'dart:convert';
+import 'package:StudentProject/model/Branch.dart';
 import 'package:flutter/rendering.dart';
-import 'package:StudentProject/model/Student.dart';
 import 'package:flutter/material.dart';
 
-class getAllStudent extends StatefulWidget {
+class getAllBranch extends StatefulWidget {
   @override
-  _getAllStudentState createState() => _getAllStudentState();
+  _getAllBranchState createState() => _getAllBranchState();
 }
 
-class _getAllStudentState extends State<getAllStudent> {
-  List<Student> items;
+class _getAllBranchState extends State<getAllBranch> {
+  List<Branch> items;
   Map data;
   @override
   Widget build(BuildContext context) {
@@ -36,27 +35,17 @@ class _getAllStudentState extends State<getAllStudent> {
                   Icons.broken_image,
                   color: Colors.grey[400],
                 ),
-//              title: Text('${items[index].Name}'),
-                subtitle: Text(
-                  '${items[index].Roll_no}',
-                  style: TextStyle(color: Colors.grey[400]),
-                ),
-                trailing: FlatButton(
-                    onPressed: () {
-                      print('${items[index].Section}'.toUpperCase());
-                    },
-                    child: Icon(
-                      Icons.arrow_right,
-                      color: Colors.grey[400],
-                      size: 30,
-                    )),
                 title: Text(
-                  '${items[index].Name}'.toUpperCase(),
+                  '${items[index].course}'.toUpperCase(),
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w400,
                     fontSize: 18,
                   ),
+                ),
+                subtitle: Text(
+                  '${items[index].courseID}',
+                  style: TextStyle(color: Colors.grey[400]),
                 ),
               ),
             );

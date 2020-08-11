@@ -1,15 +1,15 @@
 import 'dart:convert';
+import 'package:StudentProject/model/Exams.dart';
 import 'package:flutter/rendering.dart';
-import 'package:StudentProject/model/Student.dart';
 import 'package:flutter/material.dart';
 
-class getAllStudent extends StatefulWidget {
+class getAllExams extends StatefulWidget {
   @override
-  _getAllStudentState createState() => _getAllStudentState();
+  _getAllExamsState createState() => _getAllExamsState();
 }
 
-class _getAllStudentState extends State<getAllStudent> {
-  List<Student> items;
+class _getAllExamsState extends State<getAllExams> {
+  List<Exams> items;
   Map data;
   @override
   Widget build(BuildContext context) {
@@ -37,27 +37,28 @@ class _getAllStudentState extends State<getAllStudent> {
                   color: Colors.grey[400],
                 ),
 //              title: Text('${items[index].Name}'),
-                subtitle: Text(
-                  '${items[index].Roll_no}',
-                  style: TextStyle(color: Colors.grey[400]),
-                ),
-                trailing: FlatButton(
-                    onPressed: () {
-                      print('${items[index].Section}'.toUpperCase());
-                    },
-                    child: Icon(
-                      Icons.arrow_right,
-                      color: Colors.grey[400],
-                      size: 30,
-                    )),
                 title: Text(
-                  '${items[index].Name}'.toUpperCase(),
+                  '${items[index].subjectID},${items[index].courseId},${items[index].date}'
+                      .toUpperCase(),
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w400,
                     fontSize: 18,
                   ),
                 ),
+                subtitle: Text(
+                  '${items[index].type}',
+                  style: TextStyle(color: Colors.grey[400]),
+                ),
+                trailing: FlatButton(
+                    onPressed: () {
+                      print('${items[index].type}'.toUpperCase());
+                    },
+                    child: Icon(
+                      Icons.arrow_right,
+                      color: Colors.grey[400],
+                      size: 30,
+                    )),
               ),
             );
           },
