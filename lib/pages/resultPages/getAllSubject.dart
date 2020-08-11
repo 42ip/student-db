@@ -1,6 +1,7 @@
 import 'package:StudentProject/model/Subjects.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class getAllSubject extends StatefulWidget {
   @override
@@ -18,10 +19,10 @@ class _getAllSubjectState extends State<getAllSubject> {
     return MaterialApp(
       title: title,
       home: Scaffold(
-        backgroundColor: Colors.white24,
+        backgroundColor: Hexcolor('#4F6F8F'),
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.black,
+          backgroundColor: Hexcolor('#1B3B59'),
           title: Text(title),
         ),
         body: ListView.builder(
@@ -30,7 +31,7 @@ class _getAllSubjectState extends State<getAllSubject> {
             return Padding(
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 3.0),
               child: ListTile(
-                tileColor: Colors.grey[900],
+                tileColor: Hexcolor('#224C73'),
                 leading: Icon(
                   Icons.broken_image,
                   color: Colors.grey[400],

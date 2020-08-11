@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:hexcolor/hexcolor.dart';
 import 'package:StudentProject/model/Branch.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -14,9 +14,9 @@ class _branchHomeState extends State<branchHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white24,
+      backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Hexcolor('#1B3B59'),
         title: Text('this is the branch home page'),
       ),
       body: Center(
@@ -25,6 +25,7 @@ class _branchHomeState extends State<branchHome> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
+                color: Hexcolor('#224C73'),
                 onPressed: () async {
                   var client = new http.Client();
                   final res =
@@ -39,28 +40,31 @@ class _branchHomeState extends State<branchHome> {
                   Navigator.pushNamed(context, '/getAllBranch',
                       arguments: {'items': items});
                 },
-                child: Text('get', style: TextStyle(fontSize: 20)),
+                child: Text('get', style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
+                color: Hexcolor('#224C73'),
                 onPressed: () {},
-                child: Text('insert', style: TextStyle(fontSize: 20)),
+                child: Text('insert', style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
+                color: Hexcolor('#224C73'),
                 onPressed: () {},
-                child: Text('update', style: TextStyle(fontSize: 20)),
+                child: Text('update', style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
+                color: Hexcolor('#224C73'),
                 onPressed: () {},
-                child: Text('delete', style: TextStyle(fontSize: 20)),
+                child: Text('delete', style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
           ],
