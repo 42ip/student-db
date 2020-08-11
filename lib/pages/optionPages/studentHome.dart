@@ -14,7 +14,9 @@ class _studentHomeState extends State<studentHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white24,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text('this is the student home page'),
       ),
       body: Column(

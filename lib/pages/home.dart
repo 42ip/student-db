@@ -9,12 +9,15 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white24,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         centerTitle: true,
         title: Text('this is the home page'),
       ),
       body: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             RaisedButton(
               onPressed: () {},
