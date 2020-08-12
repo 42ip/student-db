@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:StudentProject/pages/data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
@@ -36,7 +38,7 @@ class _HomeState extends State<Home> {
           itemBuilder: (context, index){
             return InkWell(
               onTap: () {
-                Navigator.push(context, slides[index].url);
+               Navigator.pushNamed<dynamic>(context, slides[index].url); //LOl.....
               },
               child: Stack(
                 children: <Widget>[
