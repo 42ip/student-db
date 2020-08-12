@@ -69,7 +69,9 @@ class _subjectHomeState extends State<subjectHome> {
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/deleteSubject');
+                },
                 child: Text('delete',
                     style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
@@ -80,3 +82,4 @@ class _subjectHomeState extends State<subjectHome> {
     );
   }
 }
+//fadsfgadgad
