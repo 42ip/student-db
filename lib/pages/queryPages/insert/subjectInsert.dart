@@ -27,6 +27,7 @@ class _subjectInsertState extends State<subjectInsert> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                obscureText: true,
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.white,
                 controller: _subjectController,
@@ -44,6 +45,7 @@ class _subjectInsertState extends State<subjectInsert> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                obscureText: true,
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.white,
                 controller: _subjectIDController,

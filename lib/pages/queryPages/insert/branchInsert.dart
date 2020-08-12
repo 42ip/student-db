@@ -26,6 +26,7 @@ class _branchInsertState extends State<branchInsert> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                obscureText: true,
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.white,
                 controller: _courseController,
@@ -43,6 +44,7 @@ class _branchInsertState extends State<branchInsert> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                obscureText: true,
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.white,
                 controller: _courseIDController,
