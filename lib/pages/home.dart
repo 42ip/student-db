@@ -19,7 +19,11 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Hexcolor('#1B3B59'),
         centerTitle: true,
-        title: Text('this is the home page'),
+        title: Text('Welcome to the Lobby',
+          style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 26,
+          ),)
       ),
       body:Container(
         height: 570,
@@ -32,6 +36,8 @@ class _HomeState extends State<Home> {
           pagination: SwiperPagination(
             builder: DotSwiperPaginationBuilder(
               activeSize: 12,
+              activeColor: Hexcolor('#224c73'),
+              color: Colors.grey[300],
               space: 6,
             ),
           ),
@@ -46,7 +52,9 @@ class _HomeState extends State<Home> {
                     children:<Widget>[
                       SizedBox(height: 50,),
                       Card(
-                        elevation : 8,
+                        color: Hexcolor('#224c73'),
+                        elevation : 10,
+                        shadowColor: Hexcolor('#1b3b59'),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)
                         ),
@@ -56,16 +64,32 @@ class _HomeState extends State<Home> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                               children:<Widget>[
                                 SizedBox(height: 200,),
-                                Text(slides[index].name),
-                                Text(slides[index].desc,),
-                                SizedBox(height: 20,),
+                                Text(slides[index].name,
+                                  style: TextStyle(
+                                    fontSize: 32,
+                                  color:Colors.white
+                                  ) ,),
+                                SizedBox(height: 3,),
+                                Text(slides[index].desc,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w400,
+                                      color:Colors.white,
+                                    fontStyle: FontStyle.italic,
+                                  ) ,),
+                                SizedBox(height: 30,),
                                 Row(
                                   children: <Widget>[
-                                    Text("Know more", ),
-                                    Icon(Icons.arrow_forward),
+                                    Text("Know more",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                          color:Colors.white,
+                                        fontSize: 16,
+                                      ), ),
+                                    SizedBox(width: 10,),
+                                    Icon(Icons.arrow_forward, size: 18.0, color: Colors.white,),
                                   ],
                                 ),
-                                SizedBox(height: 10,),
+//                                SizedBox(height: 10,),
                           ],
                           ),
                         ),
