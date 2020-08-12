@@ -19,36 +19,44 @@ class _subjectInsertState extends State<subjectInsert> {
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('change this'),
+        title: Text('Insert the Subject'),
       ),
       body: Builder(
         builder: (context) => Column(
           children: [
-            TextFormField(
-              style: TextStyle(color: Colors.white),
-              cursorColor: Colors.white,
-              controller: _subjectController,
-              decoration: const InputDecoration(
-                hintText: 'Enter the subject',
-                hintStyle: TextStyle(color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextFormField(
+                style: TextStyle(color: Colors.white),
+                cursorColor: Colors.white,
+                controller: _subjectController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Enter the Subject',
+                  labelStyle: TextStyle(color: Colors.white),
+                ),
+                validator: (value) {
+                  if (isAlpha(value)) return "true";
+                  return "false";
+                },
               ),
-              validator: (value) {
-                if (isAlpha(value)) return "true";
-                return "false";
-              },
             ),
-            TextFormField(
-              style: TextStyle(color: Colors.white),
-              cursorColor: Colors.white,
-              controller: _subjectIDController,
-              decoration: const InputDecoration(
-                hintText: 'Enter the subject ID',
-                hintStyle: TextStyle(color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextFormField(
+                style: TextStyle(color: Colors.white),
+                cursorColor: Colors.white,
+                controller: _subjectIDController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Enter the Subject ID',
+                  labelStyle: TextStyle(color: Colors.white),
+                ),
+                validator: (value) {
+                  if (isAlphanumeric(value)) return "true";
+                  return "false";
+                },
               ),
-              validator: (value) {
-                if (isAlphanumeric(value)) return "true";
-                return "false";
-              },
             ),
             RaisedButton(
               color: Hexcolor('#224C73'),
@@ -66,7 +74,13 @@ class _subjectInsertState extends State<subjectInsert> {
                 );
                 Scaffold.of(context).showSnackBar(snackbar);
               },
-              child: Text('Login'),
+              child: Text(
+                  'Login',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              ),
             ),
           ],
         ),

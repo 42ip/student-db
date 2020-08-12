@@ -18,36 +18,46 @@ class _branchInsertState extends State<branchInsert> {
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('change this'),
+        title: Text('Insert the Course'),
       ),
       body: Builder(
         builder: (context) => Column(
           children: [
-            TextFormField(
-              style: TextStyle(color: Colors.white),
-              cursorColor: Colors.white,
-              controller: _courseController,
-              decoration: const InputDecoration(
-                hintText: 'Enter the course',
-                hintStyle: TextStyle(color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextFormField(
+                style: TextStyle(color: Colors.white),
+                cursorColor: Colors.white,
+                controller: _courseController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Enter the Course',
+                  labelStyle: TextStyle(color: Colors.white),
+                ),
+                validator: (value) {
+                  if (isAlpha(value)) return "true";
+                  return "false";
+                },
               ),
-              validator: (value) {
-                if (isAlpha(value)) return "true";
-                return "false";
-              },
             ),
-            TextFormField(
-              style: TextStyle(color: Colors.white),
-              cursorColor: Colors.white,
-              controller: _courseIDController,
-              decoration: const InputDecoration(
-                hintText: 'Enter the course ID',
-                hintStyle: TextStyle(color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextFormField(
+                style: TextStyle(color: Colors.white),
+                cursorColor: Colors.white,
+                controller: _courseIDController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Enter the Course ID',
+                  labelStyle: TextStyle(color: Colors.white),
+//                helperText: 'enter your course id',
+//                helperStyle: TextStyle(color: Colors.white),
+                ),
+                validator: (value) {
+                  if (isAlphanumeric(value)) return "true";
+                  return "false";
+                },
               ),
-              validator: (value) {
-                if (isAlphanumeric(value)) return "true";
-                return "false";
-              },
             ),
             RaisedButton(
               color: Hexcolor('#224C73'),
