@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:validators/validators.dart';
@@ -16,15 +16,20 @@ class _subjectInsertState extends State<subjectInsert> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
+        backgroundColor: Hexcolor('#1B3B59'),
         title: Text('change this'),
       ),
       body: Column(
         children: [
           TextFormField(
+            style: TextStyle(color: Colors.white),
+            cursorColor: Colors.white,
             controller: _subjectController,
             decoration: const InputDecoration(
               hintText: 'Enter the subject',
+              hintStyle: TextStyle(color: Colors.white),
             ),
             validator: (value) {
               if (isAlpha(value)) return "true";
@@ -32,9 +37,12 @@ class _subjectInsertState extends State<subjectInsert> {
             },
           ),
           TextFormField(
+            style: TextStyle(color: Colors.white),
+            cursorColor: Colors.white,
             controller: _subjectIDController,
             decoration: const InputDecoration(
               hintText: 'Enter the subject ID',
+              hintStyle: TextStyle(color: Colors.white),
             ),
             validator: (value) {
               if (isAlphanumeric(value)) return "true";
@@ -42,7 +50,21 @@ class _subjectInsertState extends State<subjectInsert> {
             },
           ),
           RaisedButton(
-            onPressed: _performInsert,
+            color: Hexcolor('#224C73'),
+            onPressed:(){
+              _performInsert();
+              final snackbar =   SnackBar(
+                backgroundColor: Hexcolor('#1B3B59'),
+                content: Text('$_subjectController has been added.'),
+                action: SnackBarAction(
+                  label: 'Undo',
+                  onPressed: (){
+                    //Code that is to be added later
+                  },
+                ),
+              );
+              Scaffold.of(context).showSnackBar(snackbar);
+            },
             child: Text('Login'),
           ),
         ],
