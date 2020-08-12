@@ -55,7 +55,7 @@ class _branchInsertState extends State<branchInsert> {
                 _performInsert();
                 final snackbar = SnackBar(
                   backgroundColor: Hexcolor('#1B3B59'),
-                  content: Text('new branch has been added.'),
+                  content: Text('${_courseController.text} has been added.'),
                   action: SnackBarAction(
                     label: 'Undo',
                     onPressed: () {

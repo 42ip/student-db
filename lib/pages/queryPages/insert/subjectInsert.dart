@@ -56,7 +56,7 @@ class _subjectInsertState extends State<subjectInsert> {
                 _performInsert();
                 final snackbar = SnackBar(
                   backgroundColor: Hexcolor('#1B3B59'),
-                  content: Text('new subject has been added.'),
+                  content: Text('${_subjectController.text} has been added.'),
                   action: SnackBarAction(
                     label: 'Undo',
                     onPressed: () {
