@@ -21,53 +21,55 @@ class _subjectInsertState extends State<subjectInsert> {
         backgroundColor: Hexcolor('#1B3B59'),
         title: Text('change this'),
       ),
-      body: Column(
-        children: [
-          TextFormField(
-            style: TextStyle(color: Colors.white),
-            cursorColor: Colors.white,
-            controller: _subjectController,
-            decoration: const InputDecoration(
-              hintText: 'Enter the subject',
-              hintStyle: TextStyle(color: Colors.white),
+      body: Builder(
+        builder: (context) => Column(
+          children: [
+            TextFormField(
+              style: TextStyle(color: Colors.white),
+              cursorColor: Colors.white,
+              controller: _subjectController,
+              decoration: const InputDecoration(
+                hintText: 'Enter the subject',
+                hintStyle: TextStyle(color: Colors.white),
+              ),
+              validator: (value) {
+                if (isAlpha(value)) return "true";
+                return "false";
+              },
             ),
-            validator: (value) {
-              if (isAlpha(value)) return "true";
-              return "false";
-            },
-          ),
-          TextFormField(
-            style: TextStyle(color: Colors.white),
-            cursorColor: Colors.white,
-            controller: _subjectIDController,
-            decoration: const InputDecoration(
-              hintText: 'Enter the subject ID',
-              hintStyle: TextStyle(color: Colors.white),
+            TextFormField(
+              style: TextStyle(color: Colors.white),
+              cursorColor: Colors.white,
+              controller: _subjectIDController,
+              decoration: const InputDecoration(
+                hintText: 'Enter the subject ID',
+                hintStyle: TextStyle(color: Colors.white),
+              ),
+              validator: (value) {
+                if (isAlphanumeric(value)) return "true";
+                return "false";
+              },
             ),
-            validator: (value) {
-              if (isAlphanumeric(value)) return "true";
-              return "false";
-            },
-          ),
-          RaisedButton(
-            color: Hexcolor('#224C73'),
-            onPressed:(){
-              _performInsert();
-              final snackbar =   SnackBar(
-                backgroundColor: Hexcolor('#1B3B59'),
-                content: Text('$_subjectController has been added.'),
-                action: SnackBarAction(
-                  label: 'Undo',
-                  onPressed: (){
-                    //Code that is to be added later
-                  },
-                ),
-              );
-              Scaffold.of(context).showSnackBar(snackbar);
-            },
-            child: Text('Login'),
-          ),
-        ],
+            RaisedButton(
+              color: Hexcolor('#224C73'),
+              onPressed: () {
+                _performInsert();
+                final snackbar = SnackBar(
+                  backgroundColor: Hexcolor('#1B3B59'),
+                  content: Text('new subject has been added.'),
+                  action: SnackBarAction(
+                    label: 'Undo',
+                    onPressed: () {
+                      //Code that is to be added later
+                    },
+                  ),
+                );
+                Scaffold.of(context).showSnackBar(snackbar);
+              },
+              child: Text('Login'),
+            ),
+          ],
+        ),
       ),
     );
   }
