@@ -40,7 +40,22 @@ class _branchHomeState extends State<branchHome> {
                   Navigator.pushNamed(context, '/getAllBranch',
                       arguments: {'items': items});
                 },
-                child: Text('get', style: TextStyle(fontSize: 20, color: Colors.white)),
+                child: Text('get',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: RaisedButton(
+                color: Hexcolor('#224C73'),
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    '/insertBranch',
+                  );
+                },
+                child: Text('insert',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
             Padding(
@@ -48,7 +63,8 @@ class _branchHomeState extends State<branchHome> {
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
                 onPressed: () {},
-                child: Text('insert', style: TextStyle(fontSize: 20, color: Colors.white)),
+                child: Text('update',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
             Padding(
@@ -56,15 +72,8 @@ class _branchHomeState extends State<branchHome> {
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
                 onPressed: () {},
-                child: Text('update', style: TextStyle(fontSize: 20, color: Colors.white)),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: RaisedButton(
-                color: Hexcolor('#224C73'),
-                onPressed: () {},
-                child: Text('delete', style: TextStyle(fontSize: 20, color: Colors.white)),
+                child: Text('delete',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
           ],
