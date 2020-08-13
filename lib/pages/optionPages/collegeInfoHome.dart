@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:StudentProject/model/Branch.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +35,9 @@ class _collegeInfoState extends State<collegeInfo> {
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/getExamsById');
+                },
                 child: Text('get Exams by ID',
                     style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
