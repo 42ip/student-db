@@ -26,14 +26,14 @@ class _studentHomeState extends State<studentHome> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
-                color: Hexcolor('#224C73'),
+                splashColor: Hexcolor('#4F6F8F'),
                 onPressed: () async {
                   var client = new http.Client();
                   final res = await client
                       .get('http://34.224.4.55:8080/getAllStudents');
                   print(res.body);
                   final parsed =
-                      await json.decode(res.body).cast<Map<String, dynamic>>();
+                  await json.decode(res.body).cast<Map<String, dynamic>>();
                   items = await parsed
                       .map<Student>((json) => Student.fromJson(json))
                       .toList();
@@ -41,41 +41,126 @@ class _studentHomeState extends State<studentHome> {
                   Navigator.pushNamed(context, '/getAllstudents',
                       arguments: {'items': items});
                 },
-                child: Text('get',
-                    style: TextStyle(fontSize: 20, color: Colors.white)),
+
+                textColor: Colors.white,
+                color: Colors.transparent,
+                padding: EdgeInsets.all(0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Colors.black38,
+                        Hexcolor('#132A40'),
+                        Hexcolor('#1B3B59'),
+                        Hexcolor('#224C73'),
+                        Hexcolor('#4F6F8F'),
+                        Hexcolor('#7B93AB'),
+                      ],
+                    ),
+                  ),
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  child: const Text('obtain', style: TextStyle(fontSize: 20)),
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
-                color: Hexcolor('#224C73'),
+                splashColor: Hexcolor('#4F6F8F'),
                 onPressed: () {
                   Navigator.pushNamed(context, '/studentInsert');
                 },
-                child: Text('insert',
-                    style: TextStyle(fontSize: 20, color: Colors.white)),
+                textColor: Colors.white,
+                color: Colors.transparent,
+                padding: EdgeInsets.all(0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Colors.black38,
+                        Hexcolor('#132A40'),
+                        Hexcolor('#1B3B59'),
+                        Hexcolor('#224C73'),
+                        Hexcolor('#4F6F8F'),
+                        Hexcolor('#7B93AB'),
+                      ],
+                    ),
+                  ),
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  child: const Text('insert', style: TextStyle(fontSize: 20)),
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
-                color: Hexcolor('#224C73'),
+                splashColor: Hexcolor('#4F6F8F'),
                 onPressed: () {
                   Navigator.pushNamed(context, '/updateStudent');
                 },
-                child: Text('update',
-                    style: TextStyle(fontSize: 20, color: Colors.white)),
+                textColor: Colors.white,
+                color: Colors.transparent,
+                padding: EdgeInsets.all(0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Colors.black38,
+                        Hexcolor('#132A40'),
+                        Hexcolor('#1B3B59'),
+                        Hexcolor('#224C73'),
+                        Hexcolor('#4F6F8F'),
+                        Hexcolor('#7B93AB'),
+                      ],
+                    ),
+                  ),
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  child: const Text('update', style: TextStyle(fontSize: 20)),
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
-                color: Hexcolor('#224C73'),
+                splashColor: Hexcolor('#4F6F8F'),
                 onPressed: () {
                   Navigator.pushNamed(context, '/deleteStudent');
                 },
-                child: Text('delete',
-                    style: TextStyle(fontSize: 20, color: Colors.white)),
+                textColor: Colors.white,
+                color: Colors.transparent,
+                padding: EdgeInsets.all(0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Colors.black38,
+                        Hexcolor('#132A40'),
+                        Hexcolor('#1B3B59'),
+                        Hexcolor('#224C73'),
+                        Hexcolor('#4F6F8F'),
+                        Hexcolor('#7B93AB'),
+                      ],
+                    ),
+                  ),
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  child: const Text('delete', style: TextStyle(fontSize: 20)),
+                ),
               ),
             ),
           ],
