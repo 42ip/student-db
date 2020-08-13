@@ -4,14 +4,14 @@ import 'package:http/http.dart' as http;
 import 'package:validators/validators.dart';
 
 // ignore: camel_case_types
-class subjectDelete extends StatefulWidget {
+class branchDelete extends StatefulWidget {
   @override
-  _subjectDeleteState createState() => _subjectDeleteState();
+  _branchDeleteState createState() => _branchDeleteState();
 }
 
 // ignore: camel_case_types
-class _subjectDeleteState extends State<subjectDelete> {
-  final _subjectIDController = TextEditingController();
+class _branchDeleteState extends State<branchDelete> {
+  final _branchIDController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,9 +26,9 @@ class _subjectDeleteState extends State<subjectDelete> {
             TextFormField(
               style: TextStyle(color: Colors.white),
               cursorColor: Colors.white,
-              controller: _subjectIDController,
+              controller: _branchIDController,
               decoration: const InputDecoration(
-                hintText: 'Enter the subject ID',
+                hintText: 'Enter the branch ID',
                 hintStyle: TextStyle(color: Colors.white),
               ),
               validator: (value) {
@@ -43,7 +43,7 @@ class _subjectDeleteState extends State<subjectDelete> {
                 final snackbar = SnackBar(
                   backgroundColor: Hexcolor('#1B3B59'),
                   content:
-                      Text('${_subjectIDController.text} has been deleted.'),
+                      Text('${_branchIDController.text} has been deleted.'),
                   action: SnackBarAction(
                     label: 'Undo',
                     onPressed: () {
@@ -62,12 +62,12 @@ class _subjectDeleteState extends State<subjectDelete> {
   }
 
   void _performInsert() async {
-    String subjectID = _subjectIDController.text;
-    String body = subjectID;
+    String branchID = _branchIDController.text;
+    String body = branchID;
     var client = http.Client();
     var response = await client.send(http.Request(
-        "DELETE", Uri.parse("http://34.224.4.55:8080/deleteSubject/"))
-      ..body = "$subjectID");
+        "DELETE", Uri.parse("http://34.224.4.55:8080/deleteBranch/"))
+      ..body = "$branchID");
     print(response.statusCode);
   }
 }

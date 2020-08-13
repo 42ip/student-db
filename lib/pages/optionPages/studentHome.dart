@@ -29,8 +29,8 @@ class _studentHomeState extends State<studentHome> {
                 color: Hexcolor('#224C73'),
                 onPressed: () async {
                   var client = new http.Client();
-                  final res =
-                      await client.get('http://34.224.4.55:8080/getAllStudents');
+                  final res = await client
+                      .get('http://34.224.4.55:8080/getAllStudents');
                   print(res.body);
                   final parsed =
                       await json.decode(res.body).cast<Map<String, dynamic>>();
@@ -41,7 +41,19 @@ class _studentHomeState extends State<studentHome> {
                   Navigator.pushNamed(context, '/getAllstudents',
                       arguments: {'items': items});
                 },
-                child: Text('get', style: TextStyle(fontSize: 20, color: Colors.white)),
+                child: Text('get',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: RaisedButton(
+                color: Hexcolor('#224C73'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/studentInsert');
+                },
+                child: Text('insert',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
             Padding(
@@ -49,7 +61,8 @@ class _studentHomeState extends State<studentHome> {
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
                 onPressed: () {},
-                child: Text('insert', style: TextStyle(fontSize: 20, color: Colors.white)),
+                child: Text('update',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
             Padding(
@@ -57,15 +70,8 @@ class _studentHomeState extends State<studentHome> {
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
                 onPressed: () {},
-                child: Text('update', style: TextStyle(fontSize: 20, color: Colors.white)),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: RaisedButton(
-                color: Hexcolor('#224C73'),
-                onPressed: () {},
-                child: Text('delete', style: TextStyle(fontSize: 20, color: Colors.white)),
+                child: Text('delete',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
           ],
