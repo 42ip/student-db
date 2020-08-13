@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:delayed_display/delayed_display.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Loading extends StatefulWidget {
   @override
@@ -27,6 +28,7 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Hexcolor('#4F6F8F'),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -41,7 +43,7 @@ class _LoadingState extends State<Loading> {
                   "Check your internet connection",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 35.0,
+                    fontSize: 20.0,
                     color: Colors.black,
                   ),
                 ),
