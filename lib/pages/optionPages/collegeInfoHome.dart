@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:StudentProject/model/Branch.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class collegeInfo extends StatefulWidget {
   @override
@@ -26,9 +25,11 @@ class _collegeInfoState extends State<collegeInfo> {
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
-                onPressed: () {},
-                child:
-                    Text('get Student by ID ', style: TextStyle(fontSize: 20, color: Colors.white)),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/getStudentById');
+                },
+                child: Text('get Student by ID ',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
             Padding(
@@ -36,7 +37,8 @@ class _collegeInfoState extends State<collegeInfo> {
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
                 onPressed: () {},
-                child: Text('getExamsbyID', style: TextStyle(fontSize: 20, color: Colors.white)),
+                child: Text('get Exams by ID',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
           ],

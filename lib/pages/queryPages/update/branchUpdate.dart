@@ -44,6 +44,7 @@ class _branchUpdateState extends State<branchUpdate> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                autofillHints: null,
                 obscureText: false,
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.white,

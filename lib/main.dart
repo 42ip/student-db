@@ -7,6 +7,7 @@ import 'package:StudentProject/pages/queryPages/delete/branchDelete.dart';
 import 'package:StudentProject/pages/queryPages/delete/examDelete.dart';
 import 'package:StudentProject/pages/queryPages/delete/studentDelete.dart';
 import 'package:StudentProject/pages/queryPages/delete/subjectDelete.dart';
+import 'package:StudentProject/pages/queryPages/getByQuery/getStudentById.dart';
 import 'package:StudentProject/pages/queryPages/insert/branchInsert.dart';
 import 'package:StudentProject/pages/queryPages/insert/examInsert.dart';
 import 'package:StudentProject/pages/queryPages/insert/studentInsert.dart';
@@ -50,6 +51,7 @@ void main() {
       '/deleteBranch': (context) => branchDelete(),
       '/deleteExam': (context) => examDelete(),
       '/deleteStudent': (context) => studentDelete(),
+      '/getStudentById': (context) => getStudentById(),
     },
   ));
 }
