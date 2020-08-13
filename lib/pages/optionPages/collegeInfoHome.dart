@@ -35,8 +35,6 @@ class _collegeInfoState extends State<collegeInfo> {
                 shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(18.0),
                 ),
-
-                ),
               ),
             ),
             Padding(
