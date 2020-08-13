@@ -30,31 +30,13 @@ class _studentInsertState extends State<studentInsert> {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: TextFormField(
-                obscureText: true,
+                obscureText: false,
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.white,
                 controller: _nameController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Enter the Name',
-                  labelStyle: TextStyle(color: Colors.white),
-                ),
-                validator: (value) {
-                  if (isAlpha(value)) return "true";
-                  return "false";
-                },
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: TextFormField(
-                obscureText: true,
-                style: TextStyle(color: Colors.white),
-                cursorColor: Colors.white,
-                controller: _branchController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Enter the Branch',
                   labelStyle: TextStyle(color: Colors.white),
                 ),
                 validator: (value) {
@@ -66,7 +48,25 @@ class _studentInsertState extends State<studentInsert> {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: TextFormField(
-                obscureText: true,
+                obscureText: false,
+                style: TextStyle(color: Colors.white),
+                cursorColor: Colors.white,
+                controller: _branchController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Enter the Branch',
+                  labelStyle: TextStyle(color: Colors.white),
+                ),
+                validator: (value) {
+                  if (isAlpha(value)) return "true";
+                  return "false";
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: TextFormField(
+                obscureText: false,
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.white,
                 controller: _iDController,
@@ -84,7 +84,7 @@ class _studentInsertState extends State<studentInsert> {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: TextFormField(
-                obscureText: true,
+                obscureText: false,
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.white,
                 controller: _sectionController,
@@ -102,7 +102,7 @@ class _studentInsertState extends State<studentInsert> {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: TextFormField(
-                obscureText: true,
+                obscureText: false,
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.white,
                 controller: _rollNumberController,
