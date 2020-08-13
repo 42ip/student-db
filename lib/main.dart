@@ -11,6 +11,10 @@ import 'package:StudentProject/pages/queryPages/insert/branchInsert.dart';
 import 'package:StudentProject/pages/queryPages/insert/examInsert.dart';
 import 'package:StudentProject/pages/queryPages/insert/studentInsert.dart';
 import 'package:StudentProject/pages/queryPages/insert/subjectInsert.dart';
+import 'package:StudentProject/pages/queryPages/update/branchUpdate.dart';
+import 'package:StudentProject/pages/queryPages/update/examUpdate.dart';
+import 'package:StudentProject/pages/queryPages/update/studentUpdate.dart';
+import 'package:StudentProject/pages/queryPages/update/subjectUpdate.dart';
 import 'package:StudentProject/pages/resultPages/getAllExams.dart';
 import 'package:StudentProject/pages/resultPages/getAllStudent.dart';
 import 'package:StudentProject/pages/resultPages/getAllBranch.dart';
@@ -26,22 +30,26 @@ void main() {
       '/': (context) => Loading(),
       '/home': (context) => Home(),
       '/studentHome': (context) => studentHome(),
-      '/getAllstudents': (context) => getAllStudent(),
-      '/getAllBranch': (context) => getAllBranch(),
       '/branchHome': (context) => branchHome(),
       '/subjectHome': (context) => subjectHome(),
-      '/getAllsubjects': (context) => getAllSubject(),
       '/examHome': (context) => examHome(),
-      '/getAllExams': (context) => getAllExams(),
       '/collegeInfoHome': (context) => collegeInfo(),
+      '/getAllstudents': (context) => getAllStudent(),
+      '/getAllBranch': (context) => getAllBranch(),
+      '/getAllsubjects': (context) => getAllSubject(),
+      '/getAllExams': (context) => getAllExams(),
+      '/insertExam': (context) => examInsert(),
       '/insertBranch': (context) => branchInsert(),
       '/insertSubject': (context) => subjectInsert(),
+      '/studentInsert': (context) => studentInsert(),
+      '/updateExam': (context) => examUpdate(),
+      '/updateStudent': (context) => studentUpdate(),
+      '/updateBranch': (context) => branchUpdate(),
+      '/updateSubject': (context) => subjectUpdate(),
       '/deleteSubject': (context) => subjectDelete(),
       '/deleteBranch': (context) => branchDelete(),
-      '/studentInsert': (context) => studentInsert(),
       '/deleteExam': (context) => examDelete(),
       '/deleteStudent': (context) => studentDelete(),
-      '/insertExam': (context) => examInsert(),
     },
   ));
 }

@@ -60,7 +60,9 @@ class _examHomeState extends State<examHome> {
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/updateExam');
+                },
                 child: Text('update',
                     style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
