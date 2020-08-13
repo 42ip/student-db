@@ -39,7 +39,7 @@ class _branchDeleteState extends State<branchDelete> {
             RaisedButton(
               color: Hexcolor('#224C73'),
               onPressed: () {
-                _performInsert();
+                _performDelete();
                 final snackbar = SnackBar(
                   backgroundColor: Hexcolor('#1B3B59'),
                   content:
@@ -61,7 +61,7 @@ class _branchDeleteState extends State<branchDelete> {
     );
   }
 
-  void _performInsert() async {
+  void _performDelete() async {
     String branchID = _branchIDController.text;
     String body = branchID;
     var client = http.Client();

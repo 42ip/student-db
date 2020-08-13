@@ -41,7 +41,19 @@ class _examHomeState extends State<examHome> {
                   Navigator.pushNamed(context, '/getAllExams',
                       arguments: {'items': items});
                 },
-                child: Text('get', style: TextStyle(fontSize: 20, color: Colors.white)),
+                child: Text('get',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: RaisedButton(
+                color: Hexcolor('#224C73'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/insertExam');
+                },
+                child: Text('insert',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
             Padding(
@@ -49,23 +61,19 @@ class _examHomeState extends State<examHome> {
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
                 onPressed: () {},
-                child: Text('insert', style: TextStyle(fontSize: 20, color: Colors.white)),
+                child: Text('update',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 color: Hexcolor('#224C73'),
-                onPressed: () {},
-                child: Text('update', style: TextStyle(fontSize: 20, color: Colors.white)),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: RaisedButton(
-                color: Hexcolor('#224C73'),
-                onPressed: () {},
-                child: Text('delete', style: TextStyle(fontSize: 20, color: Colors.white)),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/deleteExam');
+                },
+                child: Text('delete',
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
           ],

@@ -4,8 +4,11 @@ import 'package:StudentProject/pages/optionPages/examHome.dart';
 import 'package:StudentProject/pages/optionPages/studentHome.dart';
 import 'package:StudentProject/pages/optionPages/subjectHome.dart';
 import 'package:StudentProject/pages/queryPages/delete/branchDelete.dart';
+import 'package:StudentProject/pages/queryPages/delete/examDelete.dart';
+import 'package:StudentProject/pages/queryPages/delete/studentDelete.dart';
 import 'package:StudentProject/pages/queryPages/delete/subjectDelete.dart';
 import 'package:StudentProject/pages/queryPages/insert/branchInsert.dart';
+import 'package:StudentProject/pages/queryPages/insert/examInsert.dart';
 import 'package:StudentProject/pages/queryPages/insert/studentInsert.dart';
 import 'package:StudentProject/pages/queryPages/insert/subjectInsert.dart';
 import 'package:StudentProject/pages/resultPages/getAllExams.dart';
@@ -36,6 +39,9 @@ void main() {
       '/deleteSubject': (context) => subjectDelete(),
       '/deleteBranch': (context) => branchDelete(),
       '/studentInsert': (context) => studentInsert(),
+      '/deleteExam': (context) => examDelete(),
+      '/deleteStudent': (context) => studentDelete(),
+      '/insertExam': (context) => examInsert(),
     },
   ));
 }
