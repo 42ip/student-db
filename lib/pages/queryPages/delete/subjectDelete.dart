@@ -18,23 +18,27 @@ class _subjectDeleteState extends State<subjectDelete> {
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('change this'),
+        title: Text('Deletion'),
       ),
       body: Builder(
         builder: (context) => Column(
           children: [
-            TextFormField(
-              style: TextStyle(color: Colors.white),
-              cursorColor: Colors.white,
-              controller: _subjectIDController,
-              decoration: const InputDecoration(
-                hintText: 'Enter the subject ID',
-                hintStyle: TextStyle(color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextFormField(
+                style: TextStyle(color: Colors.white),
+                cursorColor: Colors.white,
+                controller: _subjectIDController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Enter the Subject ID',
+                  labelStyle: TextStyle(color: Colors.white),
+                ),
+                validator: (value) {
+                  if (isAlphanumeric(value)) return "true";
+                  return "false";
+                },
               ),
-              validator: (value) {
-                if (isAlphanumeric(value)) return "true";
-                return "false";
-              },
             ),
             RaisedButton(
               color: Hexcolor('#224C73'),
@@ -53,7 +57,13 @@ class _subjectDeleteState extends State<subjectDelete> {
                 );
                 Scaffold.of(context).showSnackBar(snackbar);
               },
-              child: Text('submit'),
+              child: Text(
+                  'submit',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
             ),
           ],
         ),
