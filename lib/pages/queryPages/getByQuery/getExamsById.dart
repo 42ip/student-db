@@ -55,16 +55,12 @@ class _getExamsByIdState extends State<getExamsById> {
                   backgroundColor: Hexcolor('#1B3B59'),
                   content: Text(
                       'Exams for ${_studentIdController.text} is being fetched.'),
-//                  action: SnackBarAction(
-//                    label: 'Undo',
-//                    onPressed: () {
-//                      // Code that is to be added later
-//                    },
-//                  ),
                 );
                 Scaffold.of(context).showSnackBar(snack);
-                Navigator.pushNamed(context, '/showExamdata',
-                    arguments: {'items': items});
+                Navigator.pushNamed(context, '/showExamdata', arguments: {
+                  'items': items,
+                  'id': _studentIdController.text
+                });
               },
               child: Text(
                 'get results',
