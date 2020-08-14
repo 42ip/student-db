@@ -17,15 +17,14 @@ class _getAllStudentState extends State<getAllStudent> {
     data = ModalRoute.of(context).settings.arguments;
     final title = 'Long List new ';
     items = data['items'];
-    return MaterialApp(
-      title: title,
-      home: Scaffold(
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Hexcolor('#1B3B59'),
+        title: Text(title),
+      ),
+      body: Scaffold(
         backgroundColor: Hexcolor('#4F6F8F'),
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Hexcolor('#1B3B59'),
-          title: Text(title),
-        ),
         body: ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
