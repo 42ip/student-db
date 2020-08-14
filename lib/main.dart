@@ -21,6 +21,7 @@ import 'package:StudentProject/pages/resultPages/getAllExams.dart';
 import 'package:StudentProject/pages/resultPages/getAllStudent.dart';
 import 'package:StudentProject/pages/resultPages/getAllBranch.dart';
 import 'package:StudentProject/pages/resultPages/getAllSubject.dart';
+import 'package:StudentProject/pages/resultPages/result_ExamsbyId.dart';
 import 'package:StudentProject/pages/resultPages/result_StudentbyId.dart';
 import 'package:flutter/material.dart';
 import 'pages/home.dart';
@@ -56,6 +57,7 @@ void main() {
       '/getStudentById': (context) => getStudentById(),
       '/getExamsById': (context) => getExamsById(),
       '/showStudentdata': (context) => showStudent(),
+      '/showExamdata': (context) => showExams(),
     },
   ));
 }

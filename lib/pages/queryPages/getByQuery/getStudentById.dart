@@ -48,18 +48,19 @@ class _getStudentByIdState extends State<getStudentById> {
                 var client = http.Client();
                 final res = await client.get(
                     'http://34.224.4.55:8080/getstudentbyid/${_studentIdController.text}');
+                print(res.body);
                 List<dynamic> user = jsonDecode(res.body);
                 items = user.asMap();
                 final snack = SnackBar(
                   backgroundColor: Hexcolor('#1B3B59'),
                   content:
                       Text('${_studentIdController.text} is being fetched.'),
-                  action: SnackBarAction(
-                    label: 'Undo',
-                    onPressed: () {
-                      // Code that is to be added later
-                    },
-                  ),
+//                  action: SnackBarAction(
+//                    label: 'Undo',
+//                    onPressed: () {
+//                      // Code that is to be added later
+//                    },
+//                  ),
                 );
                 Scaffold.of(context).showSnackBar(snack);
 
