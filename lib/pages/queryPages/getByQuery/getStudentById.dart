@@ -1,7 +1,8 @@
+import 'dart:convert';
+import 'package:StudentProject/model/Student.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:http/http.dart' as http;
-import 'package:http/http.dart';
 import 'package:validators/validators.dart';
 
 class getStudentById extends StatefulWidget {
@@ -10,6 +11,7 @@ class getStudentById extends StatefulWidget {
 }
 
 class _getStudentByIdState extends State<getStudentById> {
+  Map items = {};
   final _studentIdController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -46,8 +48,8 @@ class _getStudentByIdState extends State<getStudentById> {
                 var client = http.Client();
                 final res = await client.get(
                     'http://34.224.4.55:8080/getstudentbyid/${_studentIdController.text}');
-                print(res.body);
-//                Navigator.push(context, );
+                List<dynamic> user = jsonDecode(res.body);
+                items = user.asMap();
                 final snack = SnackBar(
                   backgroundColor: Hexcolor('#1B3B59'),
                   content:
@@ -60,6 +62,9 @@ class _getStudentByIdState extends State<getStudentById> {
                   ),
                 );
                 Scaffold.of(context).showSnackBar(snack);
+
+                Navigator.pushNamed(context, '/showStudentdata',
+                    arguments: {'items': items});
               },
               child: Text(
                 'get results',
