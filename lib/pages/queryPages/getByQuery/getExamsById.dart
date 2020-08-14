@@ -16,7 +16,7 @@ class _getExamsByIdState extends State<getExamsById> {
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('Insert the Course'),
+        title: Text('Insert the ID'),
       ),
       body: Builder(
         builder: (context) => Column(
@@ -30,7 +30,7 @@ class _getExamsByIdState extends State<getExamsById> {
                 controller: _studentIdController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Enter the Course',
+                  labelText: 'Enter the ID',
                   labelStyle: TextStyle(color: Colors.white),
                 ),
                 validator: (value) {

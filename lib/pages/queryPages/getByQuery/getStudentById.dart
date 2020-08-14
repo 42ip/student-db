@@ -17,7 +17,7 @@ class _getStudentByIdState extends State<getStudentById> {
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('Insert the Course'),
+        title: Text('Insert the ID'),
       ),
       body: Builder(
         builder: (context) => Column(
@@ -31,7 +31,7 @@ class _getStudentByIdState extends State<getStudentById> {
                 controller: _studentIdController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Enter the Course',
+                  labelText: 'Enter the ID',
                   labelStyle: TextStyle(color: Colors.white),
                 ),
                 validator: (value) {
@@ -47,6 +47,7 @@ class _getStudentByIdState extends State<getStudentById> {
                 final res = await client.get(
                     'http://34.224.4.55:8080/getstudentbyid/${_studentIdController.text}');
                 print(res.body);
+//                Navigator.push(context, );
                 final snack = SnackBar(
                   backgroundColor: Hexcolor('#1B3B59'),
                   content:
