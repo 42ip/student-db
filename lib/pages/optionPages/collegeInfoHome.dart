@@ -15,7 +15,7 @@ class _collegeInfoState extends State<collegeInfo> {
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('this is the branch home page'),
+        title: Text('this is the college info page'),
       ),
       body: Center(
         child: Column(

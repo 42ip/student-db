@@ -116,7 +116,7 @@ class _examInsertState extends State<examInsert> {
                 Scaffold.of(context).showSnackBar(snackbar);
               },
               child: Text(
-                'Login',
+                'Insert',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,

@@ -78,7 +78,7 @@ class _branchInsertState extends State<branchInsert> {
                 Scaffold.of(context).showSnackBar(snackbar);
               },
               child: Text(
-                'Login',
+                'Insert',
                 style: TextStyle(color: Colors.white),
               ),
             )

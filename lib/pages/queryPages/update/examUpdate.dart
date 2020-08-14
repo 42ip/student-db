@@ -21,7 +21,7 @@ class _examUpdateState extends State<examUpdate> {
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('Insert the Exam'),
+        title: Text('Update the Exam'),
       ),
       body: Builder(
         builder: (context) => Column(
@@ -116,7 +116,7 @@ class _examUpdateState extends State<examUpdate> {
                 Scaffold.of(context).showSnackBar(snackbar);
               },
               child: Text(
-                'Login',
+                'Update',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,

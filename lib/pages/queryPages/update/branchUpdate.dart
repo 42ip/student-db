@@ -79,7 +79,7 @@ class _branchUpdateState extends State<branchUpdate> {
                 Scaffold.of(context).showSnackBar(snackbar);
               },
               child: Text(
-                'Login',
+                'Update',
                 style: TextStyle(color: Colors.white),
               ),
             )

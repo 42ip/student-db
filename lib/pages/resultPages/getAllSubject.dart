@@ -14,7 +14,7 @@ class _getAllSubjectState extends State<getAllSubject> {
   @override
   Widget build(BuildContext context) {
     data = ModalRoute.of(context).settings.arguments;
-    final title = 'Long List new ';
+    final title = 'Subjects';
     items = data['items'];
     return Scaffold(
       appBar: AppBar(

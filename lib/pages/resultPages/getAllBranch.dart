@@ -14,7 +14,7 @@ class _getAllBranchState extends State<getAllBranch> {
   @override
   Widget build(BuildContext context) {
     data = ModalRoute.of(context).settings.arguments;
-    final title = 'Long List new ';
+    final title = 'Branches';
     items = data['items'];
     return Scaffold(
       appBar: AppBar(

@@ -22,7 +22,7 @@ class _studentUpdateState extends State<studentUpdate> {
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('Insert the Student'),
+        title: Text('Update the Student'),
       ),
       body: Builder(
         builder: (context) => Column(
@@ -134,7 +134,7 @@ class _studentUpdateState extends State<studentUpdate> {
                 Scaffold.of(context).showSnackBar(snackbar);
               },
               child: Text(
-                'Login',
+                'Update',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,

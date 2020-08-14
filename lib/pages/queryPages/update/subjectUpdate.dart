@@ -19,7 +19,7 @@ class _subjectUpdateState extends State<subjectUpdate> {
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('Insert the Subject'),
+        title: Text('Update the Subject'),
       ),
       body: Builder(
         builder: (context) => Column(
@@ -77,7 +77,7 @@ class _subjectUpdateState extends State<subjectUpdate> {
                 Scaffold.of(context).showSnackBar(snackbar);
               },
               child: Text(
-                'Login',
+                'Update',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
