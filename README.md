@@ -8,4 +8,4 @@ This Project allows Students to see their details by entering their credentials
 
 ## Preview
 
- update it
+![](assets/giphy.gif)
