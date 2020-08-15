@@ -72,7 +72,7 @@ class _HomeState extends State<Home> {
                                 children: <Widget>[
                                   Image(
                                     image: AssetImage(
-                                      "${slides[index].img}",
+                                     "${slides[index].img}",
                                     ),
                                     height: 200,
                                     width: 200,
