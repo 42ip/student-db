@@ -32,7 +32,7 @@ List<Info> slides = [
     name: 'Student',
     desc: "student info",
     url: '/studentHome',
-    img: 'assets/id.png',
+    img: 'assets/Student.png',
   ),
   Info(
     4,
