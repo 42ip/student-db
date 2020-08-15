@@ -1,4 +1,5 @@
 import 'package:StudentProject/model/data.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
@@ -15,6 +16,7 @@ class _HomeState extends State<Home> {
     final fixing = MediaQuery.of(context);
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+//    AssetImage imag = AssetImage('${slides[index].img}');
     return Scaffold(
 //      resizeToAvoidBottomPadding: false,
       backgroundColor: Hexcolor('#4F6F8F'),
@@ -72,6 +74,7 @@ class _HomeState extends State<Home> {
                                   SizedBox(
                                     height: 200,
                                   ),
+                                  Image.asset('${slides[index].img}'),
                                   Text(
                                     slides[index].name,
                                     style: TextStyle(
