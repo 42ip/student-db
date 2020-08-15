@@ -70,16 +70,13 @@ class _HomeState extends State<Home> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  SizedBox(
-                                    height: 200,
-                                  ),
                                   Image(
                                     image: AssetImage(
-                                      '${slides[index].img}',
+                                      "${slides[index].img}",
                                     ),
+                                    height: 200,
+                                    width: 200,
                                   ),
-
-//                                  Image.asset(""),
                                   Text(
                                     slides[index].name,
                                     style: TextStyle(
