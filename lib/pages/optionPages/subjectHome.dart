@@ -17,8 +17,9 @@ class _subjectHomeState extends State<subjectHome> {
     return Scaffold(
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('this is the subject home page'),
+        title: Text('subject home page'),
       ),
       body: Center(
         child: Column(

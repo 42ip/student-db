@@ -17,8 +17,9 @@ class _studentHomeState extends State<studentHome> {
     return Scaffold(
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('this is the student home page'),
+        title: Text('student home page'),
       ),
       body: Center(
         child: Column(

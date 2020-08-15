@@ -16,8 +16,9 @@ class _branchHomeState extends State<branchHome> {
     return Scaffold(
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('this is the branch home page'),
+        title: Text('branch home page'),
       ),
       body: Center(
         child: Column(

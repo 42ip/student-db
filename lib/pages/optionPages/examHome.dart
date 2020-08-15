@@ -17,8 +17,9 @@ class _examHomeState extends State<examHome> {
     return Scaffold(
       backgroundColor: Hexcolor('#4F6F8F'),
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Hexcolor('#1B3B59'),
-        title: Text('this is the exam home page'),
+        title: Text('exam home page'),
       ),
       body: Center(
         child: Column(
